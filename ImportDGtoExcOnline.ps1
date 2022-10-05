@@ -1,0 +1,1 @@
+import-csv "c:\temp\E5Members.csv" | foreach {New-DistributionGroup -name $_.name -DisplayName $_.name -ManagedBy $_.managedby.Split(",") -PrimarySmtpAddress $_.mail -members $_.members.Split(",") -MemberJoinRestriction 'ApprovalRequired' -MemberDepartRestriction "Closed" -RequireSenderAuthenticationEnabled $false}
