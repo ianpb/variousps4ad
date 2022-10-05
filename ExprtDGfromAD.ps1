@@ -1,0 +1,1 @@
+Get-ADGroup -Filter 'GroupCategory -eq "Distribution"' -Properties * | Select-Object name, mail, @{l='ManagedBy';e={$_.managedby -replace '^CN=|,.*$'}}, @{l='Members';e={$_.members -replace '^CN=|,.*$' -join ","}}  | Sort-Object Name, mail, ManagedBy, Members | export-csv "C:\temp\DG.csv"
