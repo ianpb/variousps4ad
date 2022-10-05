@@ -8,7 +8,7 @@ $CSVFile = "C:\temp\ADGroups_" + $DateTime + ".csv"
 # Set distinguishedName as searchbase, you can use one DN or multiple DNs
 # Or use the root domain like DC=exoip,DC=local
 $DNs = @(
-    "CN=PBF Request,OU=On-Premises Security Groups,OU=Security Groups,OU=Office 365,OU=CCI,DC=office,DC=login"
+    "CN=PBF Request,OU=On-Premises Security Groups,OU=Security Groups,OU=Office 365,OU=CCI,DC=officeSouth,DC=login"
 )
 
 # Create empty array for CSV data
