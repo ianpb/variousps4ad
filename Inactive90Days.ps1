@@ -1,6 +1,6 @@
 Import-Module ActiveDirectory
 
-$OU = "OU=CCI,DC=office,DC=login"
+$OU = "OU=CCBWI,DC=officeSouth,DC=login"
 $DaysInactive = 90
 $Time = (Get-Date).Adddays( - ($DaysInactive))
 
